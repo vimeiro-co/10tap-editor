@@ -193,7 +193,7 @@ import {
   EditorHelper,
   CustomKeyboardExtension,
   Images,
-} from '@10play/tentap-editor';
+} from '@vimeiro-co/tentap-editor';
 import { CustomKeyboard } from '../../../../src/RichText/Keyboard/CustomKeyboardBase';
 
 const keyboardStyles = StyleSheet.create({

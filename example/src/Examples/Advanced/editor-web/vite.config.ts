@@ -13,7 +13,7 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: '@10play/tentap-editor',
+        find: '@vimeiro-co/tentap-editor',
         replacement: resolve(__dirname, '../../../../../src/webEditorUtils'),
       },
     ],

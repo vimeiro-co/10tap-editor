@@ -10,7 +10,7 @@ import {
   Text,
   ScrollView,
 } from 'react-native';
-import { RichText, Toolbar, useEditorBridge } from '@10play/tentap-editor';
+import { RichText, Toolbar, useEditorBridge } from '@vimeiro-co/tentap-editor';
 import WebView from 'react-native-webview';
 
 const exampleStyles = StyleSheet.create({

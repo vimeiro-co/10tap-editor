@@ -21,7 +21,7 @@ import {
   CoreBridge,
   darkEditorTheme,
   darkEditorCss,
-} from '@10play/tentap-editor';
+} from '@vimeiro-co/tentap-editor';
 import { Images } from '../../../src/assets';
 
 const EDITOR_BACKGROUND_COLOR = '#1C1C1E';

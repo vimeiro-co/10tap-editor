@@ -13,7 +13,7 @@ import {
   useEditorBridge,
   useBridgeState,
   type EditorBridge,
-} from '@10play/tentap-editor';
+} from '@vimeiro-co/tentap-editor';
 import { Icon } from '../Icon';
 import { ComposeRichText } from './CustomRichText';
 

@@ -14,7 +14,7 @@ import {
   TenTapStartKit,
   Toolbar,
   useEditorBridge,
-} from '@10play/tentap-editor';
+} from '@vimeiro-co/tentap-editor';
 import { ProtestRiotFont } from './CustomFont';
 
 const customFont = `

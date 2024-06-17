@@ -24,8 +24,8 @@ Create `editor-web/tsconfig.json`:
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "paths": {
-      "@10play/tentap-editor": [
-        "../node_modules/@10play/tentap-editor/lib-web/typescript/webEditorUtils/index.d.ts"
+      "@vimeiro-co/tentap-editor": [
+        "../node_modules/@vimeiro-co/tentap-editor/lib-web/typescript/webEditorUtils/index.d.ts"
       ]
     },
     "moduleResolution": "bundler",
@@ -94,7 +94,7 @@ Add the following files
 ```tsx title="AdvancedEditor.tsx"
 import React from 'react';
 import { EditorContent } from '@tiptap/react';
-import { useTenTap, CoreBridge } from '@10play/tentap-editor';
+import { useTenTap, CoreBridge } from '@vimeiro-co/tentap-editor';
 import Document from '@tiptap/extension-document';
 import Paragraph from '@tiptap/extension-paragraph';
 import Text from '@tiptap/extension-text';
@@ -151,8 +151,8 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: '@10play/tentap-editor', // On our web bundle we only want to include web related code
-        replacement: '@10play/tentap-editor/web',
+        find: '@vimeiro-co/tentap-editor', // On our web bundle we only want to include web related code
+        replacement: '@vimeiro-co/tentap-editor/web',
       },
     ],
   },
@@ -174,15 +174,15 @@ Add scripts on package.json so it will be easy to run/build editor-web:
     ...
     "editor:dev": "vite --config ./editor-web/vite.config.ts",
     "editor:build": "vite --config ./editor-web/vite.config.ts build && yarn editor:post-build",
-    "editor:post-build":"node ./node_modules/@10play/tentap-editor/scripts/buildEditor.js ./editor-web/build/index.html",
+    "editor:post-build":"node ./node_modules/@vimeiro-co/tentap-editor/scripts/buildEditor.js ./editor-web/build/index.html",
     "reverse-android": "adb reverse tcp:3000 tcp:3000",
 }
 ```
 
-`editor:dev` - Run the editor web in dev mode  
-`editor:build` - Build the editor web, probably need to add to your deploy/build process  
-`editor:post-build` - This will take your built html file, and paste into a a ts and exports a string `editorHtml`  
- which we can then later use as the source of our RichText.  
+`editor:dev` - Run the editor web in dev mode
+`editor:build` - Build the editor web, probably need to add to your deploy/build process
+`editor:post-build` - This will take your built html file, and paste into a a ts and exports a string `editorHtml`
+ which we can then later use as the source of our RichText.
 `reverse-android` - On android need to reverse ports so it will be able to work with DEV / DEV_SERVER_URL props
 
 ### Step 7 - using our custom editor

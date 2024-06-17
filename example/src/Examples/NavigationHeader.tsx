@@ -7,7 +7,7 @@ import {
   StyleSheet,
   useWindowDimensions,
 } from 'react-native';
-import { RichText, Toolbar, useEditorBridge } from '@10play/tentap-editor';
+import { RichText, Toolbar, useEditorBridge } from '@vimeiro-co/tentap-editor';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 export const NavigationHeader = ({}: NativeStackScreenProps<any, any, any>) => {
   const editor = useEditorBridge({
