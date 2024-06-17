@@ -1,5 +1,5 @@
 {
-  "name": "@10play/tentap-editor",
+  "name": "@vimeiro-co/tentap-editor",
   "version": "0.5.5",
   "description": "React Native Rich Text Editor",
   "main": "lib/commonjs/index",
