@@ -13,7 +13,7 @@ export const getStyleSheetCSS = (css: string, styleSheetTag: string) => {
     cssContent = \`${css}\`;
     head = document.head || document.getElementsByTagName('head')[0],
     styleElement = head.querySelector('style[data-tag="${styleSheetTag}"]');
-  
+
     if (!styleElement) {
       // If no such element exists, create a new <style> element.
       styleElement = document.createElement('style');
@@ -21,7 +21,7 @@ export const getStyleSheetCSS = (css: string, styleSheetTag: string) => {
       styleElement.type = 'text/css'; // Specify the type attribute for clarity.
       head.appendChild(styleElement); // Append the newly created <style> element to the <head>.
     }
-    
+
     styleElement.innerHTML = cssContent;
     `;
 };
@@ -65,6 +65,7 @@ export const getInjectedJSBeforeContentLoad = (editor: EditorBridge) => {
       ? `window.initialContent = ${JSON.stringify(editor.initialContent)};`
       : ''
   }
+    window.dynamicHeight = ${editor.dynamicHeight};
     window.editable = ${editor.editable};
   `);
 };
